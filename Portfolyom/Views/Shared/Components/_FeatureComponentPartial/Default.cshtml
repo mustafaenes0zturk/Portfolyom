@@ -1,38 +1,45 @@
-﻿<section id="home" class="s-home page-hero target-section" style="background-image: url('https://i.hizliresim.com/eh5mdjf.jpg'); background-size: cover; background-position: center;">
+﻿@model List<Portfolyom.DAL.Entities.Feature>
+
+<section id="home" class="s-home page-hero target-section" style="background-image: url('https://i.hizliresim.com/eh5mdjf.jpg'); background-size: cover; background-position: center;">
 
     <div class="overlay"></div>
     <div class="shadow-overlay"></div>
+    @foreach (var item in Model)
+    {
+        <div class="home-content">
 
-    <div class="home-content">
+            <div class="row home-content__main">
 
-        <div class="row home-content__main">
+                <h3>@item.Title</h3>
 
-            <h3>Merhaba!</h3>
+                <h1>
+                    @* I am Jonathan Doe. <br>
+                    I am a graphic & UI/UX <br>
+                    designer based in Somewhere. *@
+                    @item.Description
+                </h1>
 
-            <h1>
-                I am Jonathan Doe. <br>
-                I am a graphic & UI/UX <br>
-                designer based in Somewhere.
-            </h1>
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        Son Projeler
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        Hakkımda
+                    </a>
+                </div>
 
-            <div class="home-content__buttons">
-                <a href="#works" class="smoothscroll btn btn--stroke">
-                    Son Projeler
-                </a>
-                <a href="#about" class="smoothscroll btn btn--stroke">
-                    Hakkımda
-                </a>
-            </div>
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Aşağı İn</span>
+                    </a>
+                </div>
 
-            <div class="home-content__scroll">
-                <a href="#about" class="scroll-link smoothscroll">
-                    <span>Aşağı İn</span>
-                </a>
             </div>
 
         </div>
+    }
 
-    </div> <!-- end home-content -->
+     <!-- end home-content -->
 
     <ul class="home-social">
         <li>
