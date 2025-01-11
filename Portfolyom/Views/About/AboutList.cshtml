@@ -1,0 +1,53 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "AboutList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+	<div class="content">
+		<div class="container-fluid">
+			<h4 class="page-title">Hakkımda</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Hakkımda Yazısı</div>
+						</div>
+						<div class="card-body">
+							<div class="card-sub">
+								Hakkımda bölümünün işlemlerini aşağıdan yapabilirsiniz.
+							</div>
+							<table class="table mt-3">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Title</th>
+										<th scope="col">SubDescription</th>
+										<th scope="col">Details</th>
+										<th scope="col">Sil</th>
+										<th scope="col">Güncelle</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model)
+									{
+										<tr>
+											<td>@item.AboutId</td>
+											<td>@item.Title</td>
+											<td>@item.SubDescription</td>
+											<td>@item.Details</td>
+											<td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+										    <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success">Güncelle</a></td>
+										</tr>
+									}												
+								</tbody>
+							</table>
+						    <a href="/About/CreateAbout/" class="btn btn-primary">Yeni Hakkımda</a>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+
