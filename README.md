@@ -1,1 +1,1 @@
-# Portfolyom
+# Asp.Net Core Portfolyo Projesi
