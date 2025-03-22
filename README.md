@@ -7,5 +7,5 @@ Bu proje, Asp.Net Core kullanılarak geliştirilmiş bir portfolyo projesidir.
 ### Ana Sayfa
 ![Ana Sayfa Ekran Görüntüsü](./localhost_7255_Default_.png)
 
-### Hakkımda Sayfası
+### Admin Paneli
 ![Hakkımda Sayfası Ekran Görüntüsü](./localhost_7255_About_AboutList.png)
